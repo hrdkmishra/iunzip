@@ -4,8 +4,6 @@ import threading
 import tarfile
 directory = '//home//hardman//archives//'
 extractdir = '//home//hardman//extracts//'
-
-
 def runit():
     threading.Timer(1.0, runit).start()
     # listdir returns a list of files in the directory
@@ -24,7 +22,5 @@ def runit():
                 tar.extractall(extractdir)
                 tar.close()
                 os.remove(directory + filename)
-
-
 if __name__ == '__main__':
     runit()
