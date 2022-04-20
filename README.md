@@ -21,6 +21,7 @@ If you did not add a shebang to the file you can instead run the script with thi
 The output will be saved in the nohup.out file, unless you specify the output file like here:
 
 >nohup /path/to/test.py > output.log &
+
 >nohup python /path/to/test.py > output.log &
 
 If you have redirected the output of the command somewhere else - including /dev/null - that's where it goes instead.
@@ -34,6 +35,7 @@ If you're using nohup, that probably means you want to run the command in the ba
 ## runs in background, still doesn't create nohup.out
 
 >nohup command >/dev/null 2>&1 &  
+
 You can find the process and its process ID with this command:
 
 >ps ax | grep test.py
