@@ -18,7 +18,7 @@ def runit():
             zfile.close()  # close the zip file
             os.remove(zippath)  # delete the zip file
         else:
-            if filename.endswith('.tar.gz'):
+            if filename.endswith('.tar.xz'):
                 tar = tarfile.open(directory + filename)
                 tar.extractall(extractdir)
                 tar.close()
